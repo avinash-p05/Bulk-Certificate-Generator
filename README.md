@@ -1,4 +1,4 @@
-Bulk Certificate Generator
+#Bulk Certificate Generator
 A Spring Boot application that automates the generation and distribution of certificates using custom templates and MongoDB for data storage.
 Features
 
@@ -16,8 +16,9 @@ Maven
 MongoDB
 SMTP server configuration for email sending
 
+
 Project Structure
-Copysrc/
+src/
 ├── main/
 │   ├── java/
 │   │   └── com/avalanche/Certificates_Distribution/
@@ -29,7 +30,7 @@ Copysrc/
 │       ├── templates/    # Place certificate templates here
 │       ├── fonts/        # Place custom fonts here
 │       └── application.properties
-Setup
+
 
 Clone the repository:
 

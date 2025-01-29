@@ -1,15 +1,15 @@
-#Bulk Certificate Generator
+# Bulk Certificate Generator
 A Spring Boot application that automates the generation and distribution of certificates using custom templates and MongoDB for data storage.
 Features
 
-Custom certificate template support
+# Custom certificate template support
 Bulk user data import via CSV
 Custom font support
 Automated email distribution
 Failed delivery tracking and retry mechanism
 Email delivery statistics
 
-Prerequisites
+# Prerequisites
 
 Java 17 or higher
 Maven
@@ -17,7 +17,7 @@ MongoDB
 SMTP server configuration for email sending
 
 
-Project Structure
+# Project Structure
 src/
 ├── main/
 │   ├── java/
@@ -63,7 +63,7 @@ Supported formats: TTF, OTF
 
 
 
-Database Schema
+# Database Schema
 The application uses MongoDB with the following user document structure:
 jsonCopy{
   "_id": ObjectId,
@@ -73,37 +73,37 @@ jsonCopy{
   "emailSent": Boolean,
   "_class": "com.avalanche.Certificates_Distribution.models.User"
 }
-API Endpoints
-Import Users
+# API Endpoints
+# Import Users
 httpCopyPOST /api/certificates/import
 Content-Type: multipart/form-data
 
-Accepts CSV file with user data
+# Accepts CSV file with user data
 Required CSV columns: username, email, usn
 
-Generate and Send Certificates
+# Generate and Send Certificates
 httpCopyPOST /api/certificates/send
 
-Generates certificates for all users
+# Generates certificates for all users
 Sends certificates via email
 Returns count of successfully sent certificates
 
-Get Statistics
+# Get Statistics
 httpCopyGET /api/certificates/stats
 
 Returns email delivery statistics
 
-Get Failed Deliveries
+# Get Failed Deliveries
 httpCopyGET /api/certificates/failed
 
 Returns list of users where email delivery failed
 
-Retry Failed Emails
+# Retry Failed Emails
 httpCopyPOST /api/certificates/retry-failed
 
 Retries sending certificates to failed email addresses
 
-Error Handling
+# Error Handling
 The application includes comprehensive error handling for:
 
 Invalid CSV files
@@ -111,16 +111,13 @@ Email sending failures
 Database connectivity issues
 Template processing errors
 
-Building and Running
+# Building and Running
 
-Build the project:
+# Build the project
 
-bashCopymvn clean install
+# Run the application:
 
-Run the application:
-
-bashCopyjava -jar target/certificates-distribution-1.0.0.jar
-Contributing
+# Contributing
 
 Fork the repository
 Create a feature branch
